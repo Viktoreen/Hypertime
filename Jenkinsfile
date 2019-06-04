@@ -14,13 +14,5 @@ pipeline {
                 sh 'cd hypertime-frontend && npm run build && cd..'
             }
         }
-        /*
-        stage('Test') {
-            steps {
-                sh 'npm run test -- --coverage'
-            }
-    
-        }
-        */
     }
 }
