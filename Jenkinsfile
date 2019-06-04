@@ -3,30 +3,31 @@ pipeline {
     tools {nodejs "node"}
 
     stages {
+        /*
         stage('Install, build and serve') {
             steps {
                 bat 'npm run serve'
             }
         }
-        /*
-        stage('Check lint') {
+        */
+        /*stage('Check lint') {
             steps {
-                bat 'npm run lintme'
+                sh 'npm run lint'
             }
-        }
+        }*/
         stage('Build install') {
             steps {
-                bat 'npm install'
+                sh 'npm install'
             }
         }
         stage('Build install files') {
             steps {
-                bat 'npm run build'
+                sh 'npm run build'
             }
         }
-        stage('Test') {
+        /*stage('Test') {
             steps {
-                bat 'npm run test -- --coverage'
+                sh 'npm run test -- --coverage'
             }
         }
         stage('Deploy') {
@@ -36,7 +37,7 @@ pipeline {
                 bat 'serve -s build'
                 bat 'npm eject'
             }
-        }
-        */
+        }*/
+        
     }
 }
