@@ -14,7 +14,8 @@ pipeline {
             steps {
                 sh 'npm run lint'
             }
-        }*/
+        }
+        */
         stage('Build install') {
             steps {
                 sh 'npm install'
