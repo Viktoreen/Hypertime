@@ -13,8 +13,10 @@ pipeline {
         stage('Build install files') {
             steps {
                 sh 'cd hypertime-frontend && npm run build && cd ..'
-                sh 'cd hypertime-e2e && npm run build && cd ..'
             }
+        }
+        stage('Lint control') {
+            sh 'cd hypertime-frontend && npm lint:eslint && cd ..'
         }
     }
 }
