@@ -20,5 +20,10 @@ pipeline {
                 sh 'cd hypertime-frontend && npm run build && cd ..'
             }
         }
+        stage('Test step') {
+            steps {
+                sh 'cd hypertime-frontend && npm run test && cd ..'
+            }
+        }
     }
 }
