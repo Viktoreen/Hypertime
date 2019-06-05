@@ -8,6 +8,7 @@ module.exports = { // adapted from: https://git.io/vodU0
       .assert.title('Hypertime')
       .setValue("#username", "oscarljungberg")
       .keys("\uE007")
+      .pause(5000)
       .saveScreenshot('hypertime.png')
       .end();
   }
