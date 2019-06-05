@@ -28,7 +28,6 @@ pipeline {
         stage('Test step') {
             steps {
                 sh 'cd hypertime-frontend && npm run test && cd ..'
-                sh 'cd hypertime-frontend && npm run test:watch && cd ..'
             }
         }
     }
