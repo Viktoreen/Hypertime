@@ -17,7 +17,7 @@ pipeline {
         }
         stage('Lint control') {
             steps{
-                sh 'cd hypertime-frontend && npm lint:eslint && cd ..'
+                sh 'cd hypertime-frontend && npm run lint:eslint && cd ..'
             }
         }
     }
