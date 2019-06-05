@@ -3,7 +3,12 @@ pipeline {
     tools {nodejs "node"}
 
     stages {
-
+        
+        stage('Cleanup') {
+            steps {
+                sh 'cd hypertime-frontend && npm clean:all && cd ..'
+            }
+        }
         stage('Install dependencies') {
             steps {
                 sh 'cd hypertime-frontend && npm install && cd ..'
