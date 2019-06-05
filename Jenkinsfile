@@ -6,7 +6,7 @@ pipeline {
         
         stage('Cleanup') {
             steps {
-                sh 'cd hypertime-frontend && npm clean:all && cd ..'
+                sh 'cd hypertime-frontend && npm run clean:all && cd ..'
             }
         }
         stage('Install dependencies') {
