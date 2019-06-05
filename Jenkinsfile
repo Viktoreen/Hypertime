@@ -10,14 +10,14 @@ pipeline {
                 sh 'cd hypertime-e2e && npm install && cd ..'
             }
         }
+        stage('Lintify') {
+            steps{
+                sh 'cd hypertime-frontend && npm run lint:eslint && cd ..'
+            }
+        }
         stage('Build install files') {
             steps {
                 sh 'cd hypertime-frontend && npm run build && cd ..'
-            }
-        }
-        stage('Lint control') {
-            steps{
-                sh 'cd hypertime-frontend && npm run lint:eslint && cd ..'
             }
         }
     }
