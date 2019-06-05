@@ -20,7 +20,7 @@ pipeline {
                 sh 'cd hypertime-frontend && npm run lint:eslint && cd ..'
             }
         }
-        stage('Build install files') {
+        stage('Build dist files') {
             steps {
                 sh 'cd hypertime-frontend && npm run build && cd ..'
             }
