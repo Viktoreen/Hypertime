@@ -29,7 +29,7 @@ pipeline {
             Parallel {
                 stage('Branch A') {
                     steps{
-                        sh 'echo steg 1'
+                        sh 'echo steg 1.0'
                     }
                 }
                 stage('Branch B') {
