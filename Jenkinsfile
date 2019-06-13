@@ -28,7 +28,7 @@ pipeline {
         stage('Parallella steg') {
             Parallel {
                 stage('Branch A') {
-                    steps{
+                    steps {
                         sh 'echo steg 1.0'
                     }
                 }
