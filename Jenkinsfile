@@ -25,7 +25,7 @@ pipeline {
                 sh 'cd hypertime-frontend && npm run build && cd ..'
             }
         }
-        stage('Parallel stages') {
+        stage('Parallella steg') {
             Parallel {
                 stage('Branch A') {
                     steps{
