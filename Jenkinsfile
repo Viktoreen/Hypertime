@@ -17,7 +17,7 @@ pipeline {
         }
         stage('Initiat config') {
             steps {
-                sh cd 'hypertime-e2e && node nightwatch.conf.BASIC.js && cd ..'
+                sh 'cd hypertime-e2e && node nightwatch.conf.BASIC.js && cd ..'
             }
         }
         stage('Lintify') {
