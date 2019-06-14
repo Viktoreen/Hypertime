@@ -13,6 +13,8 @@ module.exports = { // adapted from: https://git.io/vodU0
       .assert.elementPresent("ul")
       .pause(1000)
       .click('xpath', '//*[@id="app"]/div/div/div/a[2]')
+      .assert.containsText('p.ListItemTitle-sc-1t4skn3-0.fWjsMZ', "Quick scaffolding")
+      .pause(2000)
       .end();
   }
 };
