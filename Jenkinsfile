@@ -28,6 +28,7 @@ pipeline {
         stage('Test step') {
             steps {
                 sh 'cd hypertime-frontend && npm run test && cd ..'
+                sh 'cd hypertime-e2e && npm run e2e && cd ..'
             }
         }
         /*stage('Deploy') {
