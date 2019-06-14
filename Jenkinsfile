@@ -25,15 +25,15 @@ pipeline {
                 sh 'cd hypertime-frontend && npm run build && cd ..'
             }
         }
-        /*stage('Test step') {
+        stage('Test step') {
             steps {
                 sh 'cd hypertime-frontend && npm run test && cd ..'
             }
-        }*/
-        stage('Deploy') {
+        }
+        /*stage('Deploy') {
             steps {
                 sh 'az storage blob upload-batch -s /var/lib/jenkins/workspace/Hypertime_master/hypertime-frontend/build -d /$web --connection-string="DefaultEndpointsProtocol=https;AccountName=ecutbildning;AccountKey=hTzQiTDx4w1/Cuh1fADc66g9O23/atfZS1hfCZ33vrgaJ8LC5lNrUmfQRQldBD/beeH++hS+kFvMVDYMI3jaiA==;EndpointSuffix=core.windows.net"'
             }
-        }        
+        }*/        
     }
 }
