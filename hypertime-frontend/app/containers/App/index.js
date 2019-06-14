@@ -37,7 +37,7 @@ export default function App() {
       <Header />
       <Switch>
         <Route exact path="/" component={HomePage} />
-        <Route id="features" path="/features" component={FeaturePage} />
+        <Route path="/features" component={FeaturePage} />
         <Route path="" component={NotFoundPage} />
       </Switch>
       <Footer />
