@@ -15,6 +15,11 @@ pipeline {
                 sh 'cd hypertime-e2e && npm install && cd ..'
             }
         }
+        stage('Initiat config') {
+            steps {
+                sh cd 'hypertime-e2e && node nightwatch.conf.BASIC.js && cd ..'
+            }
+        }
         stage('Lintify') {
             steps{
                 sh 'cd hypertime-frontend && npm run lint:eslint && cd ..'
